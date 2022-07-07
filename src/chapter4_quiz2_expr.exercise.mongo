@@ -1,0 +1,4 @@
+/**
+Search out all the companies that have more employees than the year in which they were founded
+*/
+db.companies.find({ "$expr": {"$gt": ["$number_of_employees", "$founded_year"]} }).count()
