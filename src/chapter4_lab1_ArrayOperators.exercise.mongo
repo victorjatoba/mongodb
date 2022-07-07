@@ -1,0 +1,5 @@
+/**
+What is the name of the listing in the sample_airbnb.listingsAndReviews dataset that accommodates more than 6 people and has exactly 50 reviews?
+R. Sunset Beach Lodge Retreat
+*/
+db.listingsAndReviews.find({ "accommodates": {"$gt": 6}, "reviews": { "$size": 50 } })
