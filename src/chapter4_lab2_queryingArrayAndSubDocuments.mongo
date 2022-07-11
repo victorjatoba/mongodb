@@ -1,0 +1,3 @@
+# How many inspections from the sample_training.inspections collection were conducted in the city of NEW YORK?
+
+db.inspections.find({ "address.city": {"$eq": "NEW YORK"} }).count()
