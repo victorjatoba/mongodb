@@ -1,0 +1,3 @@
+# How many companies in the sample_training.companies collection have offices in the city of Seattle?
+
+db.companies.find({ offices: { "$elemMatch": {city: "Seattle"} } }).count()
