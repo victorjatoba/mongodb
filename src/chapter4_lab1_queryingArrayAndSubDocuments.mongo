@@ -1,0 +1,9 @@
+# How many trips in the sample_training.trips collection started at stations that are to the west of the -74 longitude coordinate?
+# 
+# Longitude decreases in value as you move west.
+# 
+# Note: We always list the longitude first and then latitude in the coordinate pairs; i.e.
+# 
+# <field_name>: [ <longitude>, <latitude> ]
+
+db.trips.find({ "start station location.coordinates.0": {"$lte": -74} }).count()
